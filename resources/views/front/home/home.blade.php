@@ -10,7 +10,9 @@
         <div class="slider-active swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="intro-section slider-height-1 slider-content-center bg-img single-animation-wrap slider-bg-color-1" style="background-image:url(assets/images/slider/slider-bg-1.jpg)">
+                    <div
+                        class="intro-section slider-height-1 slider-content-center bg-img single-animation-wrap slider-bg-color-1"
+                        style="background-image:url(assets/images/slider/slider-bg-1.jpg)">
                         <div class="container">
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
@@ -18,7 +20,7 @@
                                         <h3 class="animated">new arrival</h3>
                                         <h1 class="animated">Summer <br>Collection</h1>
                                         <div class="slider-btn btn-hover">
-                                            <a href="{{route('product.details')}}" class="btn animated">
+                                            <a href="{{route('product.details', ['id' => 4])}}" class="btn animated">
                                                 Shop Now <i class=" ti-arrow-right "></i>
                                             </a>
                                         </div>
@@ -26,7 +28,8 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="hero-slider-img-1 slider-animated-1">
-                                        <img class="animated animated-slider-img-1" src="{{asset('/')}}assets/images/slider/slider-img-1.png" alt="">
+                                        <img class="animated animated-slider-img-1"
+                                             src="{{asset('/')}}assets/images/slider/slider-img-1.png" alt="">
                                         <div class="product-offer animated">
                                             <h5>30% <span>Off</span></h5>
                                         </div>
@@ -37,7 +40,9 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="intro-section slider-height-1 slider-content-center bg-img single-animation-wrap slider-bg-color-1" style="background-image:url(assets/images/slider/slider-bg-1.jpg)">
+                    <div
+                        class="intro-section slider-height-1 slider-content-center bg-img single-animation-wrap slider-bg-color-1"
+                        style="background-image:url(assets/images/slider/slider-bg-1.jpg)">
                         <div class="container">
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-6">
@@ -45,7 +50,7 @@
                                         <h3 class="animated">new arrival</h3>
                                         <h1 class="animated">Summer <br>Collection</h1>
                                         <div class="slider-btn btn-hover">
-                                            <a href="{{route('product.details')}}" class="btn animated">
+                                            <a href="{{route('product.details', ['id' => 4])}}" class="btn animated">
                                                 Shop Now <i class=" ti-arrow-right "></i>
                                             </a>
                                         </div>
@@ -53,7 +58,8 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="hero-slider-img-1 slider-animated-1">
-                                        <img class="animated animated-slider-img-1" src="{{asset('/')}}assets/images/slider/slider-img-1-2.png" alt="">
+                                        <img class="animated animated-slider-img-1"
+                                             src="{{asset('/')}}assets/images/slider/slider-img-1-2.png" alt="">
                                         <div class="product-offer animated">
                                             <h5>30% <span>Off</span></h5>
                                         </div>
@@ -73,36 +79,39 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="banner-wrap mb-30" data-aos="fade-up" data-aos-delay="200">
-                        <a href="{{route('product.details')}}"><img src="{{asset('/')}}assets/images/banner/banner-1.png" alt=""></a>
+                        <a href="{{route('product.details', ['id' => 4])}}"><img
+                                src="{{asset('/')}}assets/images/banner/banner-1.png" alt=""></a>
                         <div class="banner-content-1">
                             <h5>new arrival</h5>
                             <h3>Office Chair</h3>
                             <div class="banner-btn">
-                                <a href="{{route('product.details')}}">Shop Now</a>
+                                <a href="{{route('product.details', ['id' => 4])}}">Shop Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="banner-wrap mb-30" data-aos="fade-up" data-aos-delay="400">
-                        <a href="{{route('product.details')}}"><img src="{{asset('/')}}assets/images/banner/banner-2.png" alt=""></a>
+                        <a href="{{route('product.details', ['id' => 4])}}"><img
+                                src="{{asset('/')}}assets/images/banner/banner-2.png" alt=""></a>
                         <div class="banner-content-1">
                             <h5>new arrival</h5>
                             <h3>Hanging Chair</h3>
                             <div class="banner-btn">
-                                <a href="{{route('product.details')}}">Shop Now</a>
+                                <a href="{{route('product.details', ['id' => 4])}}">Shop Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="banner-wrap mb-30" data-aos="fade-up" data-aos-delay="600">
-                        <a href="{{route('product.details')}}"><img src="{{asset('/')}}assets/images/banner/banner-3.png" alt=""></a>
+                        <a href="{{route('product.details', ['id' => 4])}}"><img
+                                src="{{asset('/')}}assets/images/banner/banner-3.png" alt=""></a>
                         <div class="banner-content-1">
                             <h5>new arrival</h5>
                             <h3>Folding Chair</h3>
                             <div class="banner-btn">
-                                <a href="{{route('product.details')}}">Shop Now</a>
+                                <a href="{{route('product.details', ['id' => 4])}}">Shop Now</a>
                             </div>
                         </div>
                     </div>
@@ -125,141 +134,45 @@
             </div>
             <div class="product-slider-active-1 swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    @foreach($products as $product)
+                        <div class="swiper-slide">
                         <div class="product-wrap" data-aos="fade-up" data-aos-delay="200">
                             <div class="product-img img-zoom mb-25">
-                                <a href="{{route('product.details')}}">
-                                    <img src="{{asset('/')}}assets/images/product/product-1.png" alt="">
+                                <a href="{{route('product.details', ['id' => $product->id])}}">
+                                    <img src="{{asset($product->image)}}" style="height: 250px;" alt="">
                                 </a>
                                 <div class="product-badge badge-top badge-right badge-pink">
                                     <span>-10%</span>
                                 </div>
                                 <div class="product-action-wrap">
-                                    <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                    <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                    </button>
+                                    <button class="product-action-btn-1 showModal" data-id="{{$product->id}}" title="Quick View" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
                                         <i class="pe-7s-look"></i>
                                     </button>
                                 </div>
                                 <div class="product-action-2-wrap">
-                                    <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3><a href="{{route('product.details')}}">New Modern Sofa Set</a></h3>
-                                <div class="product-price">
-                                    <span class="old-price">$25.89 </span>
-                                    <span class="new-price">$20.25 </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-wrap" data-aos="fade-up" data-aos-delay="400">
-                            <div class="product-img img-zoom mb-25">
-                                <a href="{{route('product.details')}}">
-                                    <img src="{{asset('/')}}assets/images/product/product-2.png" alt="">
-                                </a>
-                                <div class="product-action-wrap">
-                                    <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                    <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="pe-7s-look"></i>
+                                    <button class="product-action-btn-2 addToCart" data-id="{{$product->id}}" data-qty="1" title="Add To Cart"><i class="pe-7s-cart"></i>
+                                        Add to cart
                                     </button>
                                 </div>
-                                <div class="product-action-2-wrap">
-                                    <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
-                                </div>
                             </div>
                             <div class="product-content">
-                                <h3><a href="{{route('product.details')}}">New Modern Sofa Set</a></h3>
+                                <h3><a href="{{route('product.details', ['id' => $product->id])}}">{{$product->name}}</a></h3>
                                 <div class="product-price">
-                                    <span>$50.25 </span>
+                                    <span class="old-price">&#2547;{{$product->regular_price}} </span>
+                                    <span class="new-price">&#2547;{{$product->selling_price}} </span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="product-wrap" data-aos="fade-up" data-aos-delay="600">
-                            <div class="product-img img-zoom mb-25">
-                                <a href="{{route('product.details')}}">
-                                    <img src="{{asset('/')}}assets/images/product/product-3.png" alt="">
-                                </a>
-                                <div class="product-badge badge-top badge-right badge-pink">
-                                    <span>-10%</span>
-                                </div>
-                                <div class="product-action-wrap">
-                                    <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                    <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="pe-7s-look"></i>
-                                    </button>
-                                </div>
-                                <div class="product-action-2-wrap">
-                                    <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3><a href="{{route('product.details')}}">Easy Modern Chair</a></h3>
-                                <div class="product-price">
-                                    <span class="old-price">$45.00 </span>
-                                    <span class="new-price">$40.00 </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-wrap" data-aos="fade-up" data-aos-delay="800">
-                            <div class="product-img img-zoom mb-25">
-                                <a href="{{route('product.details')}}">
-                                    <img src="{{asset('/')}}assets/images/product/product-4.png" alt="">
-                                </a>
-                                <div class="product-action-wrap">
-                                    <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                    <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="pe-7s-look"></i>
-                                    </button>
-                                </div>
-                                <div class="product-action-2-wrap">
-                                    <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3><a href="{{route('product.details')}}">Stylish Swing Chair</a></h3>
-                                <div class="product-price">
-                                    <span>$30.25 </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-wrap" data-aos="fade-up" data-aos-delay="1000">
-                            <div class="product-img img-zoom mb-25">
-                                <a href="{{route('product.details')}}">
-                                    <img src="{{asset('/')}}assets/images/product/product-2.png" alt="">
-                                </a>
-                                <div class="product-badge badge-top badge-right badge-pink">
-                                    <span>-10%</span>
-                                </div>
-                                <div class="product-action-wrap">
-                                    <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                    <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="pe-7s-look"></i>
-                                    </button>
-                                </div>
-                                <div class="product-action-2-wrap">
-                                    <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3><a href="{{route('product.details')}}">New Modern Sofa Set</a></h3>
-                                <div class="product-price">
-                                    <span class="old-price">$80.50 </span>
-                                    <span class="new-price">$75.25 </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-                <div class="product-prev-1 product-nav-1" data-aos="fade-up" data-aos-delay="200"><i class="fa fa-angle-left"></i></div>
-                <div class="product-next-1 product-nav-1" data-aos="fade-up" data-aos-delay="200"><i class="fa fa-angle-right"></i></div>
+                <div class="product-prev-1 product-nav-1" data-aos="fade-up" data-aos-delay="200"><i
+                        class="fa fa-angle-left"></i></div>
+                <div class="product-next-1 product-nav-1" data-aos="fade-up" data-aos-delay="200"><i
+                        class="fa fa-angle-right"></i></div>
             </div>
         </div>
     </div>
@@ -268,13 +181,14 @@
             <div class="row">
                 <div class="col-lg-7 col-md-7">
                     <div class="banner-wrap mb-30" data-aos="fade-up" data-aos-delay="200">
-                        <a href="{{route('product.details')}}"><img src="{{asset('/')}}assets/images/banner/banner-4.png" alt=""></a>
+                        <a href="{{route('product.details', ['id' => 4])}}"><img
+                                src="{{asset('/')}}assets/images/banner/banner-4.png" alt=""></a>
                         <div class="banner-content-2">
                             <span>Sale 30%</span>
                             <h2>New Furniture</h2>
                             <p>Lorem ipsum dolor sit amet consecte adipisicing elit sed do</p>
                             <div class="btn-style-2 btn-hover">
-                                <a href="{{route('product.details')}}" class="btn">
+                                <a href="{{route('product.details', ['id' => 4])}}" class="btn">
                                     Shop Now
                                 </a>
                             </div>
@@ -283,9 +197,11 @@
                 </div>
                 <div class="col-lg-5 col-md-5">
                     <div class="banner-wrap mb-30" data-aos="fade-up" data-aos-delay="400">
-                        <a href="{{route('product.details')}}"><img src="{{asset('/')}}assets/images/banner/banner-5.png" alt=""></a>
+                        <a href="{{route('product.details', ['id' => 4])}}"><img
+                                src="{{asset('/')}}assets/images/banner/banner-5.png" alt=""></a>
                         <div class="banner-content-3">
-                            <h3>Up To 30% <img src="{{asset('/')}}assets/images/icon-img/sale.png" alt=""> Every Item</h3>
+                            <h3>Up To 30% <img src="{{asset('/')}}assets/images/icon-img/sale.png" alt=""> Every Item
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -347,14 +263,18 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="home-single-product-img" data-aos="fade-up" data-aos-delay="200">
-                        <a href="{{route('product.details')}}"><img src="{{asset('/')}}assets/images/product/single-product.png" alt=""></a>
+                        <a href="{{route('product.details', ['id' => 4])}}"><img
+                                src="{{asset('/')}}assets/images/product/single-product.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="home-single-product-content">
                         <h2 data-aos="fade-up" data-aos-delay="200">Modern Chair</h2>
                         <h3 data-aos="fade-up" data-aos-delay="400">$20.25</h3>
-                        <p data-aos="fade-up" data-aos-delay="600">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo incididunt ut labore et dolore mt aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+                        <p data-aos="fade-up" data-aos-delay="600">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit, sed do eiusmod tempo incididunt ut labore et dolore mt aliqua. Ut enim ad minim
+                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate</p>
                         <div class="product-color" data-aos="fade-up" data-aos-delay="800">
                             <span>Color :</span>
                             <ul>
@@ -365,7 +285,7 @@
                         </div>
                         <div class="product-details-action-wrap" data-aos="fade-up" data-aos-delay="1000">
                             <div class="product-quality">
-                                <input class="cart-plus-minus-box input-text qty text" name="qtybutton" value="1">
+                                <input class="cart-plus-minus-box input-text qty text" name="qty" value="1">
                             </div>
                             <div class="single-product-cart btn-hover">
                                 <a href="#">Add to cart</a>
@@ -389,7 +309,7 @@
                     <h2>New Dining <br>Chair Set</h2>
                     <h3>Up To 30% Off</h3>
                     <div class="btn-style-2 btn-hover">
-                        <a href="{{route('product.details')}}" class="btn">
+                        <a href="{{route('product.details', ['id' => 4])}}" class="btn">
                             Shop Now
                         </a>
                     </div>
@@ -415,24 +335,28 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35" data-aos="fade-up" data-aos-delay="200">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-5.png" alt="">
                                     </a>
                                     <div class="product-badge badge-top badge-right badge-pink">
                                         <span>-10%</span>
                                     </div>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Interior moderno render</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Interior moderno render</a></h3>
                                     <div class="product-price">
                                         <span class="old-price">$25.89 </span>
                                         <span class="new-price">$20.25 </span>
@@ -443,21 +367,25 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35" data-aos="fade-up" data-aos-delay="400">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-6.png" alt="">
                                     </a>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Stylish Dining Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Stylish Dining Chair</a></h3>
                                     <div class="product-price">
                                         <span>$50.25 </span>
                                     </div>
@@ -467,24 +395,28 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35" data-aos="fade-up" data-aos-delay="600">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-7.png" alt="">
                                     </a>
                                     <div class="product-badge badge-top badge-right badge-pink">
                                         <span>-10%</span>
                                     </div>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Round Standard Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Round Standard Chair</a></h3>
                                     <div class="product-price">
                                         <span class="old-price">$45.00 </span>
                                         <span class="new-price">$40.00 </span>
@@ -495,21 +427,25 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35" data-aos="fade-up" data-aos-delay="800">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-4.png" alt="">
                                     </a>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Stylish Swing Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Stylish Swing Chair</a></h3>
                                     <div class="product-price">
                                         <span>$30.25 </span>
                                     </div>
@@ -519,24 +455,28 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35" data-aos="fade-up" data-aos-delay="200">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-8.png" alt="">
                                     </a>
                                     <div class="product-badge badge-top badge-right badge-pink">
                                         <span>-10%</span>
                                     </div>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Modern Swivel Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Modern Swivel Chair</a></h3>
                                     <div class="product-price">
                                         <span class="old-price">$25.89 </span>
                                         <span class="new-price">$20.25 </span>
@@ -547,21 +487,25 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35" data-aos="fade-up" data-aos-delay="400">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-2.png" alt="">
                                     </a>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">New Modern Sofa Set</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">New Modern Sofa Set</a></h3>
                                     <div class="product-price">
                                         <span>$50.25 </span>
                                     </div>
@@ -571,24 +515,28 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35" data-aos="fade-up" data-aos-delay="600">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-3.png" alt="">
                                     </a>
                                     <div class="product-badge badge-top badge-right badge-pink">
                                         <span>-10%</span>
                                     </div>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Easy Modern Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Easy Modern Chair</a></h3>
                                     <div class="product-price">
                                         <span class="old-price">$45.00 </span>
                                         <span class="new-price">$40.00 </span>
@@ -599,21 +547,25 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35" data-aos="fade-up" data-aos-delay="800">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-9.png" alt="">
                                     </a>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Modern Lounge Chairs</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Modern Lounge Chairs</a></h3>
                                     <div class="product-price">
                                         <span>$30.25 </span>
                                     </div>
@@ -627,24 +579,28 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-9.png" alt="">
                                     </a>
                                     <div class="product-badge badge-top badge-right badge-pink">
                                         <span>-10%</span>
                                     </div>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Modern Lounge Chairs</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Modern Lounge Chairs</a></h3>
                                     <div class="product-price">
                                         <span class="old-price">$25.89 </span>
                                         <span class="new-price">$20.25 </span>
@@ -655,21 +611,25 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-8.png" alt="">
                                     </a>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Modern Swivel Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Modern Swivel Chair</a></h3>
                                     <div class="product-price">
                                         <span>$50.25 </span>
                                     </div>
@@ -679,24 +639,28 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-6.png" alt="">
                                     </a>
                                     <div class="product-badge badge-top badge-right badge-pink">
                                         <span>-10%</span>
                                     </div>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Stylish Dining Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Stylish Dining Chair</a></h3>
                                     <div class="product-price">
                                         <span class="old-price">$45.00 </span>
                                         <span class="new-price">$40.00 </span>
@@ -707,21 +671,25 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-7.png" alt="">
                                     </a>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Round Standard Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Round Standard Chair</a></h3>
                                     <div class="product-price">
                                         <span>$30.25 </span>
                                     </div>
@@ -731,24 +699,28 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-5.png" alt="">
                                     </a>
                                     <div class="product-badge badge-top badge-right badge-pink">
                                         <span>-10%</span>
                                     </div>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Interior moderno render</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Interior moderno render</a></h3>
                                     <div class="product-price">
                                         <span class="old-price">$25.89 </span>
                                         <span class="new-price">$20.25 </span>
@@ -759,21 +731,25 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-4.png" alt="">
                                     </a>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Stylish Swing Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Stylish Swing Chair</a></h3>
                                     <div class="product-price">
                                         <span>$50.25 </span>
                                     </div>
@@ -783,24 +759,28 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-2.png" alt="">
                                     </a>
                                     <div class="product-badge badge-top badge-right badge-pink">
                                         <span>-10%</span>
                                     </div>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">New Modern Sofa Set</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">New Modern Sofa Set</a></h3>
                                     <div class="product-price">
                                         <span class="old-price">$45.00 </span>
                                         <span class="new-price">$40.00 </span>
@@ -811,21 +791,25 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-1.png" alt="">
                                     </a>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">New Modern Sofa Set</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">New Modern Sofa Set</a></h3>
                                     <div class="product-price">
                                         <span>$30.25 </span>
                                     </div>
@@ -839,24 +823,28 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-4.png" alt="">
                                     </a>
                                     <div class="product-badge badge-top badge-right badge-pink">
                                         <span>-10%</span>
                                     </div>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Stylish Swing Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Stylish Swing Chair</a></h3>
                                     <div class="product-price">
                                         <span class="old-price">$25.89 </span>
                                         <span class="new-price">$20.25 </span>
@@ -867,21 +855,25 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-3.png" alt="">
                                     </a>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Easy Modern Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Easy Modern Chair</a></h3>
                                     <div class="product-price">
                                         <span>$50.25 </span>
                                     </div>
@@ -891,24 +883,28 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-5.png" alt="">
                                     </a>
                                     <div class="product-badge badge-top badge-right badge-pink">
                                         <span>-10%</span>
                                     </div>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Interior moderno render</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Interior moderno render</a></h3>
                                     <div class="product-price">
                                         <span class="old-price">$45.00 </span>
                                         <span class="new-price">$40.00 </span>
@@ -919,21 +915,25 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-2.png" alt="">
                                     </a>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">New Modern Sofa Set</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">New Modern Sofa Set</a></h3>
                                     <div class="product-price">
                                         <span>$30.25 </span>
                                     </div>
@@ -943,24 +943,28 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-1.png" alt="">
                                     </a>
                                     <div class="product-badge badge-top badge-right badge-pink">
                                         <span>-10%</span>
                                     </div>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">New Modern Sofa Set</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">New Modern Sofa Set</a></h3>
                                     <div class="product-price">
                                         <span class="old-price">$25.89 </span>
                                         <span class="new-price">$20.25 </span>
@@ -971,21 +975,25 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-8.png" alt="">
                                     </a>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Modern Swivel Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Modern Swivel Chair</a></h3>
                                     <div class="product-price">
                                         <span>$50.25 </span>
                                     </div>
@@ -995,24 +1003,28 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-7.png" alt="">
                                     </a>
                                     <div class="product-badge badge-top badge-right badge-pink">
                                         <span>-10%</span>
                                     </div>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Round Standard Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Round Standard Chair</a></h3>
                                     <div class="product-price">
                                         <span class="old-price">$45.00 </span>
                                         <span class="new-price">$40.00 </span>
@@ -1023,21 +1035,25 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product-wrap mb-35">
                                 <div class="product-img img-zoom mb-25">
-                                    <a href="{{route('product.details')}}">
+                                    <a href="{{route('product.details', ['id' => 4])}}">
                                         <img src="{{asset('/')}}assets/images/product/product-6.png" alt="">
                                     </a>
                                     <div class="product-action-wrap">
-                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i>
+                                        </button>
+                                        <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
                                     </div>
                                     <div class="product-action-2-wrap">
-                                        <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
+                                        <button class="product-action-btn-2" title="Add To Cart"><i
+                                                class="pe-7s-cart"></i> Add to cart
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-content">
-                                    <h3><a href="{{route('product.details')}}">Stylish Dining Chair</a></h3>
+                                    <h3><a href="{{route('product.details', ['id' => 4])}}">Stylish Dining Chair</a></h3>
                                     <div class="product-price">
                                         <span>$30.25 </span>
                                     </div>
@@ -1097,7 +1113,8 @@
                     <div class="blog-wrap mb-30" data-aos="fade-up" data-aos-delay="200">
                         <div class="blog-img-date-wrap mb-25">
                             <div class="blog-img">
-                                <a href="blog-details.html"><img src="{{asset('/')}}assets/images/blog/blog-1.png" alt=""></a>
+                                <a href="blog-details.html"><img src="{{asset('/')}}assets/images/blog/blog-1.png"
+                                                                 alt=""></a>
                             </div>
                             <div class="blog-date">
                                 <h5>05 <span>May</span></h5>
@@ -1121,7 +1138,8 @@
                     <div class="blog-wrap mb-30" data-aos="fade-up" data-aos-delay="400">
                         <div class="blog-img-date-wrap mb-25">
                             <div class="blog-img">
-                                <a href="blog-details.html"><img src="{{asset('/')}}assets/images/blog/blog-2.png" alt=""></a>
+                                <a href="blog-details.html"><img src="{{asset('/')}}assets/images/blog/blog-2.png"
+                                                                 alt=""></a>
                             </div>
                             <div class="blog-date">
                                 <h5>06 <span>May</span></h5>
@@ -1145,7 +1163,8 @@
                     <div class="blog-wrap mb-30" data-aos="fade-up" data-aos-delay="600">
                         <div class="blog-img-date-wrap mb-25">
                             <div class="blog-img">
-                                <a href="blog-details.html"><img src="{{asset('/')}}assets/images/blog/blog-3.png" alt=""></a>
+                                <a href="blog-details.html"><img src="{{asset('/')}}assets/images/blog/blog-3.png"
+                                                                 alt=""></a>
                             </div>
                             <div class="blog-date">
                                 <h5>07 <span>May</span></h5>
@@ -1158,9 +1177,9 @@
                                     <li>By:<a href="#"> Admin</a></li>
                                 </ul>
                             </div>
-                            <h3><a href="blog-details.html">Fusce euismod varius tellus, nec molestie turpis.</a></h3>
+                            <h3><a href="">Fusce euismod varius tellus, nec molestie turpis.</a></h3>
                             <div class="blog-btn">
-                                <a href="blog-details.html">Read More</a>
+                                <a href="">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -1169,4 +1188,52 @@
         </div>
     </div>
 
+@endsection
+
+@section('front-js')
+    <script>
+        $(document).on('click', '.showModal', function () {
+            let productID = $(this).data('id');
+            let baseUrl = {!! json_encode(url('/')) !!};
+            $.ajax({
+                url: "{{url('/get-product-data-for-modal')}}",
+                method: "GET",
+                dataType: "JSON",
+                data: {id:productID},
+                success: function (data) {
+                    $('#modalImage').attr('src', baseUrl+'/'+data.image);
+                    $('#modalName').text(data.name);
+                    $('#modalRegularPrice').text('৳ '+data.regular_price);
+                    $('#modalSellingPrice').text('৳ '+data.selling_price);
+                    $('#modalShortDescription').text(data.short_description);
+                },
+                error: function (e) {
+                    console.log(e);
+                },
+            })
+        });
+    </script>
+
+    <script>
+        $(document).on('click', '.addToCart', function () {
+            let productId = $(this).data('id');
+            let qty = $(this).data('qty');
+            {{--let token = {!! json_encode(csrf_token()) !!};--}}
+            $.ajax({
+                url: "{{url('add-to-cart')}}",
+                method: "POST",
+                dataType: "JSON",
+                data: {product_id:productId, qty:qty},
+                success: function (data) {
+                    if (data === 'Success')
+                    {
+                        toastr.success('Cart Added Successfully!');
+                    }
+                },
+                error: function (e) {
+                    console.log(e);
+                },
+            })
+        });
+    </script>
 @endsection

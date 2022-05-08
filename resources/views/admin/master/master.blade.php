@@ -31,6 +31,15 @@
 
 @include('admin.includes.script')
 
+{{-- toastr for dashboard --}}
+@if(Session::has('message'))
+    <script>
+        $(document).ready(function () {
+            toastr.success('{{Session::get('message')}}');
+        })
+    </script>
+@endif
+
 </body>
 
 </html>

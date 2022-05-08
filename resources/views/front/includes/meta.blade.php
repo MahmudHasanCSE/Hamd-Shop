@@ -5,6 +5,8 @@
 <meta name="description" content="Urdan Minimal eCommerce Bootstrap 5 Template is a stunning eCommerce website template that is the best choice for any online store.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<meta name="csrf-token" content="{{csrf_token()}}">
+
 <!-- Open Graph (OG) meta tags are snippets of code that control how URLs are displayed when shared on social media  -->
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="website" />

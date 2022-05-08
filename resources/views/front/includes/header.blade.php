@@ -49,12 +49,29 @@
                             <ul>
                                 <li><a href="{{route('home')}}">HOME</a></li>
 
-                                <li><a href="{{route('shop')}}">SHOP</a></li>
+                                <li><a href="#">SHOP</a>
+                                    <ul class="mega-menu-style mega-menu-mrg-1">
+                                        <li>
+                                            <ul>
+                                                @foreach($categories as $category)
+                                                    <li>
+                                                        <a class="dropdown-title" href="{{route('shop', ['id' => $category->id])}}">{{$category->name}}</a>
+                                                        <ul>
+                                                            @foreach($category->subcategories as $subcategory)
+                                                                <li><a href=""> > {{$subcategory->name}}</a></li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
 
                                 <li><a href="#">PAGES</a>
                                     <ul class="sub-menu-style">
                                         <li><a href="about-us.html">about us </a></li>
-                                        <li><a href="cart.html">cart page</a></li>
+                                        <li><a href="{{route('cart.view')}}">Cart View</a></li>
                                         <li><a href="checkout.html">checkout </a></li>
                                         <li><a href="my-account.html">my account</a></li>
                                         <li><a href="wishlist.html">wishlist </a></li>
@@ -147,7 +164,7 @@
                 <h4>Subtotal: <span>$170.00</span></h4>
             </div>
             <div class="cart-btn btn-hover">
-                <a class="theme-color" href="cart.html">view cart</a>
+                <a class="theme-color" href="{{route('cart.view')}}">view cart</a>
             </div>
             <div class="checkout-btn btn-hover">
                 <a class="theme-color" href="checkout.html">checkout</a>

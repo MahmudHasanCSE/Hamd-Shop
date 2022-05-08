@@ -11,17 +11,17 @@
             <div class="breadcrumb-content text-center">
                 <h2 data-aos="fade-up" data-aos-delay="200">Product Details</h2>
                 <ul data-aos="fade-up" data-aos-delay="400">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{route('home')}}">Home</a></li>
                     <li><i class="ti-angle-right"></i></li>
-                    <li>Product Details</li>
+                    <li>{{$product->name}}</li>
                 </ul>
             </div>
         </div>
         <div class="breadcrumb-img-1" data-aos="fade-right" data-aos-delay="200">
-            <img src="assets/images/banner/breadcrumb-1.png" alt="">
+            <img src="{{asset('/')}}assets/images/banner/breadcrumb-1.png" alt="">
         </div>
         <div class="breadcrumb-img-2" data-aos="fade-left" data-aos-delay="200">
-            <img src="assets/images/banner/breadcrumb-2.png" alt="">
+            <img src="{{asset('/')}}assets/images/banner/breadcrumb-2.png" alt="">
         </div>
     </div>
     <div class="product-details-area pb-100 pt-100">
@@ -31,96 +31,32 @@
                     <div class="product-details-img-wrap" data-aos="fade-up" data-aos-delay="200">
                         <div class="swiper-container product-details-big-img-slider-2 pd-big-img-style">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="easyzoom-style">
-                                        <div class="easyzoom easyzoom--overlay">
-                                            <a href="assets/images/product-details/pro-details-zoom-img-1.png">
-                                                <img src="assets/images/product-details/pro-details-large-img-1.png" alt="">
+                                @foreach($subImages as $subImage)
+                                    <div class="swiper-slide">
+                                        <div class="easyzoom-style">
+                                            <div class="easyzoom easyzoom--overlay">
+                                                <a href="{{asset($subImage->image)}}">
+                                                    <img src="{{asset($subImage->image)}}" style="height: 450px;" alt="">
+                                                </a>
+                                            </div>
+                                            <a class="easyzoom-pop-up img-popup" href="{{asset($subImage->image)}}">
+                                                <i class="pe-7s-search"></i>
                                             </a>
                                         </div>
-                                        <a class="easyzoom-pop-up img-popup" href="assets/images/product-details/pro-details-large-img-1.png">
-                                            <i class="pe-7s-search"></i>
-                                        </a>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="easyzoom-style">
-                                        <div class="easyzoom easyzoom--overlay">
-                                            <a href="assets/images/product-details/pro-details-zoom-img-2.png">
-                                                <img src="assets/images/product-details/pro-details-large-img-2.png" alt="">
-                                            </a>
-                                        </div>
-                                        <a class="easyzoom-pop-up img-popup" href="assets/images/product-details/pro-details-large-img-2.png">
-                                            <i class="pe-7s-search"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="easyzoom-style">
-                                        <div class="easyzoom easyzoom--overlay">
-                                            <a href="assets/images/product-details/pro-details-zoom-img-3.png">
-                                                <img src="assets/images/product-details/pro-details-large-img-3.png" alt="">
-                                            </a>
-                                        </div>
-                                        <a class="easyzoom-pop-up img-popup" href="assets/images/product-details/pro-details-large-img-3.png">
-                                            <i class="pe-7s-search"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="easyzoom-style">
-                                        <div class="easyzoom easyzoom--overlay">
-                                            <a href="assets/images/product-details/pro-details-zoom-img-4.png">
-                                                <img src="assets/images/product-details/pro-details-large-img-4.png" alt="">
-                                            </a>
-                                        </div>
-                                        <a class="easyzoom-pop-up img-popup" href="assets/images/product-details/pro-details-large-img-4.png">
-                                            <i class="pe-7s-search"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="easyzoom-style">
-                                        <div class="easyzoom easyzoom--overlay">
-                                            <a href="assets/images/product-details/pro-details-zoom-img-5.png">
-                                                <img src="assets/images/product-details/pro-details-large-img-5.png" alt="">
-                                            </a>
-                                        </div>
-                                        <a class="easyzoom-pop-up img-popup" href="assets/images/product-details/pro-details-large-img-5.png">
-                                            <i class="pe-7s-search"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                         <div class="product-details-small-img-wrap">
                             <div class="swiper-container product-details-small-img-slider-2 pd-small-img-style pd-small-img-style-modify">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="product-details-small-img">
-                                            <img src="assets/images/product-details/pro-details-small-img-6.png" alt="Product Thumnail">
+                                    @foreach($subImages as $subImage)
+                                        <div class="swiper-slide">
+                                            <div class="product-details-small-img">
+                                                <img src="{{asset($subImage->image)}}" style="height: 100px;" alt="Product Thumnail">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="product-details-small-img">
-                                            <img src="assets/images/product-details/pro-details-small-img-7.png" alt="Product Thumnail">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="product-details-small-img">
-                                            <img src="assets/images/product-details/pro-details-small-img-8.png" alt="Product Thumnail">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="product-details-small-img">
-                                            <img src="assets/images/product-details/pro-details-small-img-9.png" alt="Product Thumnail">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="product-details-small-img">
-                                            <img src="assets/images/product-details/pro-details-small-img-10.png" alt="Product Thumnail">
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="pd-prev-2 pd-nav-style-2"> <i class="ti-angle-left"></i></div>
@@ -130,10 +66,10 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="product-details-content" data-aos="fade-up" data-aos-delay="400">
-                        <h2>New Modern Chair</h2>
+                        <h2>{{$product->name}}</h2>
                         <div class="product-details-price">
-                            <span class="old-price">$25.89 </span>
-                            <span class="new-price">$20.25</span>
+                            <span class="old-price">&#2547;{{$product->regular_price}} </span>
+                            <span class="new-price">&#2547;{{$product->selling_price}}</span>
                         </div>
                         <div class="product-details-review">
                             <div class="product-rating">
@@ -153,20 +89,24 @@
                                 <li><a title="Purple" class="purple" href="#">purple</a></li>
                             </ul>
                         </div>
-                        <div class="product-details-action-wrap">
-                            <div class="product-quality">
-                                <input class="cart-plus-minus-box input-text qty text" name="qtybutton" value="1">
+                        <form action="{{route('cart.add')}}" method="post" id="cartForm">
+                            @csrf
+                            <input type="hidden" name="product_id" value="{{$product->id}}"/>
+                            <div class="product-details-action-wrap">
+                                <div class="product-quality">
+                                    <input class="cart-plus-minus-box input-text qty text" name="qtybutton" value="1">
+                                </div>
+                                <div class="single-product-cart btn-hover">
+                                    <a href="#" id="submitCartForm" onclick="event.preventDefault();document.getElementById('cartForm').submit();">Add to cart</a>
+                                </div>
+                                <div class="single-product-wishlist">
+                                    <a title="Wishlist" href="wishlist.html"><i class="pe-7s-like"></i></a>
+                                </div>
+                                <div class="single-product-compare">
+                                    <a title="Compare" href="#"><i class="pe-7s-shuffle"></i></a>
+                                </div>
                             </div>
-                            <div class="single-product-cart btn-hover">
-                                <a href="#">Add to cart</a>
-                            </div>
-                            <div class="single-product-wishlist">
-                                <a title="Wishlist" href="wishlist.html"><i class="pe-7s-like"></i></a>
-                            </div>
-                            <div class="single-product-compare">
-                                <a title="Compare" href="#"><i class="pe-7s-shuffle"></i></a>
-                            </div>
-                        </div>
+                        </form>
                         <div class="product-details-meta">
                             <ul>
                                 <li><span class="title">SKU:</span> Ch-256xl</li>
@@ -205,28 +145,12 @@
             <div class="tab-content">
                 <div id="des-details1" class="tab-pane active">
                     <div class="product-description-content text-center">
-                        <p data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                        <p data-aos="fade-up" data-aos-delay="400">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut per unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</p>
+                        <p data-aos="fade-up" data-aos-delay="200">{!! $product->short_description !!}</p>
                     </div>
                 </div>
                 <div id="des-details2" class="tab-pane">
                     <div class="specification-wrap table-responsive">
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td class="width1">Brands</td>
-                                <td>Airi, Brand, Draven, Skudmart, Yena</td>
-                            </tr>
-                            <tr>
-                                <td class="width1">Color</td>
-                                <td>Blue, Gray, Pink</td>
-                            </tr>
-                            <tr>
-                                <td class="width1">Size</td>
-                                <td>L, M, S, XL, XXL</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <p data-aos="fade-up" data-aos-delay="200">{!! $product->long_description !!}</p>
                     </div>
                 </div>
                 <div id="des-details3" class="tab-pane">
@@ -234,7 +158,7 @@
                         <h3>1 review for Sleeve Button Cowl Neck</h3>
                         <div class="single-review">
                             <div class="review-img">
-                                <img src="assets/images/product-details/review-1.png" alt="">
+                                <img src="{{asset('/')}}assets/images/product-details/review-1.png" alt="">
                             </div>
                             <div class="review-content">
                                 <div class="review-rating">
@@ -308,18 +232,19 @@
             </div>
             <div class="related-product-active swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    @foreach($relatedProducts as $relatedProduct)
+                        <div class="swiper-slide">
                         <div class="product-wrap" data-aos="fade-up" data-aos-delay="200">
                             <div class="product-img img-zoom mb-25">
-                                <a href="product-details.html">
-                                    <img src="assets/images/product/product-1.png" alt="">
+                                <a href="{{route('product.details', ['id' => $relatedProduct->id])}}">
+                                    <img src="{{asset($relatedProduct->image)}}" alt="">
                                 </a>
                                 <div class="product-badge badge-top badge-right badge-pink">
                                     <span>-10%</span>
                                 </div>
                                 <div class="product-action-wrap">
                                     <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                    <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <button class="product-action-btn-1 showModal" data-id="{{$relatedProduct->id}}" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <i class="pe-7s-look"></i>
                                     </button>
                                 </div>
@@ -328,121 +253,43 @@
                                 </div>
                             </div>
                             <div class="product-content">
-                                <h3><a href="product-details.html">New Modern Sofa Set</a></h3>
+                                <h3><a href="{{route('product.details', ['id' => $relatedProduct->id])}}">{{$relatedProduct->name}}</a></h3>
                                 <div class="product-price">
-                                    <span class="old-price">$25.89 </span>
-                                    <span class="new-price">$20.25 </span>
+                                    <span class="old-price">&#2547;{{$relatedProduct->regular_price}} </span>
+                                    <span class="new-price">&#2547;{{$relatedProduct->selling_price}} </span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="product-wrap" data-aos="fade-up" data-aos-delay="400">
-                            <div class="product-img img-zoom mb-25">
-                                <a href="product-details.html">
-                                    <img src="assets/images/product/product-2.png" alt="">
-                                </a>
-                                <div class="product-action-wrap">
-                                    <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                    <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="pe-7s-look"></i>
-                                    </button>
-                                </div>
-                                <div class="product-action-2-wrap">
-                                    <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3><a href="product-details.html">New Modern Sofa Set</a></h3>
-                                <div class="product-price">
-                                    <span>$50.25 </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-wrap" data-aos="fade-up" data-aos-delay="600">
-                            <div class="product-img img-zoom mb-25">
-                                <a href="product-details.html">
-                                    <img src="assets/images/product/product-3.png" alt="">
-                                </a>
-                                <div class="product-badge badge-top badge-right badge-pink">
-                                    <span>-10%</span>
-                                </div>
-                                <div class="product-action-wrap">
-                                    <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                    <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="pe-7s-look"></i>
-                                    </button>
-                                </div>
-                                <div class="product-action-2-wrap">
-                                    <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3><a href="product-details.html">Easy Modern Chair</a></h3>
-                                <div class="product-price">
-                                    <span class="old-price">$45.00 </span>
-                                    <span class="new-price">$40.00 </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-wrap" data-aos="fade-up" data-aos-delay="800">
-                            <div class="product-img img-zoom mb-25">
-                                <a href="product-details.html">
-                                    <img src="assets/images/product/product-4.png" alt="">
-                                </a>
-                                <div class="product-action-wrap">
-                                    <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                    <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="pe-7s-look"></i>
-                                    </button>
-                                </div>
-                                <div class="product-action-2-wrap">
-                                    <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3><a href="product-details.html">Stylish Swing Chair</a></h3>
-                                <div class="product-price">
-                                    <span>$30.25 </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-wrap">
-                            <div class="product-img img-zoom mb-25">
-                                <a href="product-details.html">
-                                    <img src="assets/images/product/product-2.png" alt="">
-                                </a>
-                                <div class="product-badge badge-top badge-right badge-pink">
-                                    <span>-10%</span>
-                                </div>
-                                <div class="product-action-wrap">
-                                    <button class="product-action-btn-1" title="Wishlist"><i class="pe-7s-like"></i></button>
-                                    <button class="product-action-btn-1" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="pe-7s-look"></i>
-                                    </button>
-                                </div>
-                                <div class="product-action-2-wrap">
-                                    <button class="product-action-btn-2" title="Add To Cart"><i class="pe-7s-cart"></i> Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3><a href="product-details.html">New Modern Sofa Set</a></h3>
-                                <div class="product-price">
-                                    <span class="old-price">$80.50 </span>
-                                    <span class="new-price">$75.25 </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
 
+@endsection
+
+@section('front-js')
+    <script>
+        $(document).on('click', '.showModal', function () {
+            let productID = $(this).data('id');
+            let baseUrl = {!! json_encode(url('/')) !!};
+            $.ajax({
+                url: "{{url('/get-product-data-for-modal')}}",
+                method: "GET",
+                dataType: "JSON",
+                data: {id:productID},
+                success: function (data) {
+                    $('#modalImage').attr('src', baseUrl+'/'+data.image);
+                    $('#modalName').text(data.name);
+                    $('#modalRegularPrice').text('৳ '+data.regular_price);
+                    $('#modalSellingPrice').text('৳ '+data.selling_price);
+                    $('#modalShortDescription').text(data.short_description);
+                },
+                error: function (e) {
+                    console.log(e);
+                },
+            })
+        });
+    </script>
 @endsection
