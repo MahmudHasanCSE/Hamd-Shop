@@ -94,7 +94,7 @@
                             <input type="hidden" name="product_id" value="{{$product->id}}"/>
                             <div class="product-details-action-wrap">
                                 <div class="product-quality">
-                                    <input class="cart-plus-minus-box input-text qty text" name="qtybutton" value="1">
+                                    <input class="cart-plus-minus-box input-text qty text" name="qty" value="1">
                                 </div>
                                 <div class="single-product-cart btn-hover">
                                     <a href="#" id="submitCartForm" onclick="event.preventDefault();document.getElementById('cartForm').submit();">Add to cart</a>
